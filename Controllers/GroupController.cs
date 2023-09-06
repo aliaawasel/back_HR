@@ -14,6 +14,27 @@ namespace HR_System.Controllers
         {
             this._groupRepository=groupRepo;
         }
+
+
+
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+           var groups= _groupRepository.GetAllGroups();
+            if (groups == null)
+            {
+                return NotFound();
+            }
+            else if (groups!= null) {
+            return Ok(groups);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }
         [HttpPost("Insert")]
         public IActionResult Insert(GroupDto group)
         {

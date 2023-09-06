@@ -3,6 +3,7 @@ using HR_System.DTOs.DepartmentDto;
 using HR_System.DTOs.GroupDto;
 using HR_System.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 namespace HR_System.Repositories.Group
 {
@@ -69,6 +70,35 @@ namespace HR_System.Repositories.Group
         //    hREntity.Groups.Add(group);
         //    hREntity.SaveChanges();
         //}
+
+        public Models.Group getbyID(int id)
+        
+            {
+            return hREntity.Groups.Include(g => g.GroupPermissions).ThenInclude(gp => gp.Permissions).FirstOrDefault(g => g.IsDeleted != true && g.Id == id); ;
+            }
+
+        public getAllGroupsDto getGroupbyID(int id)
+
+        {
+            var group = getbyID(id);
+            var groupDto= new getAllGroupsDto();
+            groupDto.GroupName = group.Name;
+            groupDto.pagesName = group.GroupPermissions.Select(gp => gp.Permissions.pageName).ToList();
+            return(groupDto);
+        }
+        public List<getAllGroupsDto> GetAllGroups()
+        {
+            var groups= hREntity.Groups.Include(g=>g.GroupPermissions).ThenInclude(gp=>gp.Permissions).Where(g=>g.IsDeleted!=true).ToList();
+            var GroupDto = groups.Select(g => new getAllGroupsDto
+            {
+                GroupName = g.Name,
+                pagesName = g.GroupPermissions.Select(gp => gp.Permissions.pageName).ToList(),
+            }).ToList();
+            return (GroupDto);
+
+            
+            
+        }
         public void AddGroup(GroupDto groupDto)
         {
             var group = new Models.Group
@@ -88,6 +118,34 @@ namespace HR_System.Repositories.Group
                 hREntity.GroupPermissions.Add(groupPermissions);
             }
             hREntity.SaveChanges();
+
+        }
+
+        public void UpdateGroup(GroupDto groupDto)
+        {
+            var group = new Models.Group
+            {
+                Name = groupDto.GroupName,
+            };
+
+            hREntity.Groups.Update(group);
+            hREntity.SaveChanges();
+            foreach (var item in groupDto.pages)
+            {
+                GroupPermissions groupPermissions = new GroupPermissions
+                {
+                    PermissionID = item,
+                    GroupID = group.Id
+                };
+                hREntity.GroupPermissions.Update(groupPermissions);
+            }
+            hREntity.SaveChanges();
+
+        }
+
+        public void DeleteGroup(int id)
+        {
+
 
         }
         public void Addpermission(permissionsDto permissionDto)

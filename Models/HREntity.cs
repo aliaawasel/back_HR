@@ -35,8 +35,7 @@ namespace HR_System.Models
             modelBuilder.Entity<GeneralSettings>()
                 .HasData(new GeneralSettings { ID = 1, Add_hours = 100, Sub_hours = 100, vacation1 = "Friday", vacation2 = "Saturday" });
 
-            modelBuilder.Entity<GroupPermissions>()
-                .HasKey(ea => new { ea.GroupID, ea.PermissionID });
+           
 
             //modelBuilder.Entity<Department>()
             //    .HasIndex(e => e.Name)
@@ -55,9 +54,22 @@ namespace HR_System.Models
             //   .IsUnique();
 
 
+          
+            modelBuilder.Entity<GroupPermissions>()
+                .HasKey(gp => new { gp.GroupID, gp.PermissionID });
 
+            modelBuilder.Entity<GroupPermissions>()
+                .HasOne(gp => gp.Groups)
+                .WithMany(g => g.GroupPermissions)
+                .HasForeignKey(gp => gp.GroupID);
 
-         modelBuilder.Entity<Department>()
+            modelBuilder.Entity<GroupPermissions>()
+                .HasOne(gp => gp.Permissions)
+                .WithMany(p => p.GroupPermissions)
+                .HasForeignKey(gp => gp.PermissionID);
+        
+
+        modelBuilder.Entity<Department>()
                 .HasIndex(e => new { e.Name })
                 .IsUnique()
                 .HasFilter("[IsDeleted] = 0");

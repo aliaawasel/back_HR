@@ -3,7 +3,7 @@
     public class InsertGroup
     {
         public string GroupName { get; set; }
-        public List<GroupPermissionAddDto> GroupPermissions { get; set; }
+        public List<getAllGroupsDto> GroupPermissions { get; set; }
 
     }
 }
