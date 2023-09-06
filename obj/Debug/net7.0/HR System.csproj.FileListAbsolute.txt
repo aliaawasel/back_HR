@@ -1,0 +1,165 @@
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\appsettings.Development.json
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\appsettings.json
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\HR System.exe
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\HR System.deps.json
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\HR System.runtimeconfig.json
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\HR System.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\HR System.pdb
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Azure.Core.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Azure.Identity.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Humanizer.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.CodeDom.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Memory.Data.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\iTi\Angular\project\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.csproj.AssemblyReference.cache
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.GeneratedMSBuildEditorConfig.editorconfig
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.AssemblyInfoInputs.cache
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.AssemblyInfo.cs
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.csproj.CoreCompileInputs.cache
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.MvcApplicationPartsAssemblyInfo.cs
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.MvcApplicationPartsAssemblyInfo.cache
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets\msbuild.HR System.Microsoft.AspNetCore.StaticWebAssets.props
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets\msbuild.build.HR System.props
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.HR System.props
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.HR System.props
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets.pack.json
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets.build.json
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\staticwebassets.development.json
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\scopedcss\bundle\HR System.styles.css
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.csproj.CopyComplete
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.dll
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\refint\HR System.dll
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.pdb
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\HR System.genruntimeconfig.cache
+D:\iTi\Angular\project\HR System\obj\Debug\net7.0\ref\HR System.dll
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.csproj.AssemblyReference.cache
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.AssemblyInfoInputs.cache
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.AssemblyInfo.cs
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.csproj.CoreCompileInputs.cache
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.MvcApplicationPartsAssemblyInfo.cs
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.MvcApplicationPartsAssemblyInfo.cache
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.dll
+D:\Pioneer\HR System\obj\Debug\net7.0\refint\HR System.dll
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.pdb
+D:\Pioneer\HR System\bin\Debug\net7.0\appsettings.Development.json
+D:\Pioneer\HR System\bin\Debug\net7.0\appsettings.json
+D:\Pioneer\HR System\bin\Debug\net7.0\HR System.exe
+D:\Pioneer\HR System\bin\Debug\net7.0\HR System.deps.json
+D:\Pioneer\HR System\bin\Debug\net7.0\HR System.runtimeconfig.json
+D:\Pioneer\HR System\bin\Debug\net7.0\HR System.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\HR System.pdb
+D:\Pioneer\HR System\bin\Debug\net7.0\Azure.Core.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Azure.Identity.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Humanizer.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.CodeDom.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Memory.Data.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets\msbuild.HR System.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets\msbuild.build.HR System.props
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.HR System.props
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.HR System.props
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets.build.json
+D:\Pioneer\HR System\obj\Debug\net7.0\staticwebassets.development.json
+D:\Pioneer\HR System\obj\Debug\net7.0\scopedcss\bundle\HR System.styles.css
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.csproj.CopyComplete
+D:\Pioneer\HR System\obj\Debug\net7.0\HR System.genruntimeconfig.cache
+D:\Pioneer\HR System\obj\Debug\net7.0\ref\HR System.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\EPPlus.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\EPPlus.Interfaces.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\EPPlus.System.Drawing.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Office.Interop.Excel.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\Pioneer\HR System\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
