@@ -1,11 +1,13 @@
 ﻿using HR_System.DTOs.EmployeeDto;
 using HR_System.Models;
 using HR_System.Repositories.Employee;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HR_System.Controllers
 {
+    [Authorize(Policy = "المستخدمين")]
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase

@@ -85,19 +85,6 @@ namespace HR_System.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Permissions",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    pageName = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Permissions", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -184,27 +171,22 @@ namespace HR_System.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "GroupPermissions",
+                name: "Permissions",
                 columns: table => new
                 {
-                    GroupID = table.Column<int>(type: "int", nullable: false),
-                    PermissionID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    pageName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GroupId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GroupPermissions", x => new { x.GroupID, x.PermissionID });
+                    table.PrimaryKey("PK_Permissions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_GroupPermissions_Groups_GroupID",
-                        column: x => x.GroupID,
+                        name: "FK_Permissions_Groups_GroupId",
+                        column: x => x.GroupId,
                         principalTable: "Groups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_GroupPermissions_Permissions_PermissionID",
-                        column: x => x.PermissionID,
-                        principalTable: "Permissions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -315,6 +297,30 @@ namespace HR_System.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "GroupPermissions",
+                columns: table => new
+                {
+                    GroupID = table.Column<int>(type: "int", nullable: false),
+                    PermissionID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GroupPermissions", x => new { x.GroupID, x.PermissionID });
+                    table.ForeignKey(
+                        name: "FK_GroupPermissions_Groups_GroupID",
+                        column: x => x.GroupID,
+                        principalTable: "Groups",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_GroupPermissions_Permissions_PermissionID",
+                        column: x => x.PermissionID,
+                        principalTable: "Permissions",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "GeneralSettings",
                 columns: new[] { "ID", "Add_hours", "Sub_hours", "vacation1", "vacation2" },
@@ -399,6 +405,11 @@ namespace HR_System.Migrations
                 columns: new[] { "Name", "Date" },
                 unique: true,
                 filter: "[IsDeleted] = 0");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Permissions_GroupId",
+                table: "Permissions",
+                column: "GroupId");
         }
 
         /// <inheritdoc />
@@ -444,10 +455,10 @@ namespace HR_System.Migrations
                 name: "Permissions");
 
             migrationBuilder.DropTable(
-                name: "Groups");
+                name: "Departments");
 
             migrationBuilder.DropTable(
-                name: "Departments");
+                name: "Groups");
         }
     }
 }

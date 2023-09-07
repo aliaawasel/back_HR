@@ -104,11 +104,11 @@ namespace HR_System
                 });
             });
 
-            builder.Services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
+            //builder.Services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
-            builder.Services.AddControllers();
-        
-        var app = builder.Build();
+            //builder.Services.AddControllers();
+
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

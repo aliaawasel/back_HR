@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HR_System.Migrations
 {
     [DbContext(typeof(HREntity))]
-    [Migration("20230906124722_v1")]
+    [Migration("20230907110149_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -327,11 +327,16 @@ namespace HR_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
                     b.Property<string>("pageName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GroupId");
 
                     b.ToTable("Permissions");
                 });
@@ -521,6 +526,13 @@ namespace HR_System.Migrations
                     b.Navigation("Permissions");
                 });
 
+            modelBuilder.Entity("HR_System.Models.Permissions", b =>
+                {
+                    b.HasOne("HR_System.Models.Group", null)
+                        .WithMany("permissions")
+                        .HasForeignKey("GroupId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -587,6 +599,8 @@ namespace HR_System.Migrations
                     b.Navigation("GroupPermissions");
 
                     b.Navigation("Users");
+
+                    b.Navigation("permissions");
                 });
 
             modelBuilder.Entity("HR_System.Models.Permissions", b =>
