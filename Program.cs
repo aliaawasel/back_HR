@@ -1,4 +1,5 @@
-
+﻿
+using HR_System.CustomAuthorization;
 using HR_System.Models;
 using HR_System.Repositories.Attendance;
 using HR_System.Repositories.Department;
@@ -8,11 +9,13 @@ using HR_System.Repositories.Group;
 using HR_System.Repositories.Official_Vocations;
 using HR_System.Repositories.Salary;
 using HR_System.Repositories.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Office.Interop.Excel;
 using System.Security.Claims;
 using System.Text;
 
@@ -80,13 +83,32 @@ namespace HR_System
                     builder.AllowAnyHeader();
                 });
             });
-            builder.Services.AddAuthorization(Options =>
+
+            builder.Services.AddAuthorization(options =>
             {
-                Options.AddPolicy("users", policy => policy.RequireClaim("Group.Name", "users"));
+                options.AddPolicy("users", policy =>
+                {
+                    policy.Requirements.Add(new PermissionRequirement("المستخدمين"));
+                });
+                options.AddPolicy("Employees", policy =>
+                {
+                    policy.Requirements.Add(new PermissionRequirement("الموظفيين"));
+                });
+                options.AddPolicy("groups", policy =>
+                {
+                    policy.Requirements.Add(new PermissionRequirement("المجموعات"));
+                });
+                options.AddPolicy("vactions", policy =>
+                {
+                    policy.Requirements.Add(new PermissionRequirement("الاجازات الرسميه"));
+                });
             });
 
+            builder.Services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
 
-            var app = builder.Build();
+            builder.Services.AddControllers();
+        
+        var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

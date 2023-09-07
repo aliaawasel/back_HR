@@ -15,5 +15,7 @@ namespace HR_System.Models
         [ForeignKey("GroupID")]
 
         public virtual Group Group { get; set; }
+
+
     }
 }

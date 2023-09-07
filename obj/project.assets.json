@@ -4649,19 +4649,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\aliaa hamdy wasel\\.nuget\\packages\\": {}
+    "C:\\Users\\aliaa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pioneer\\HR System\\HR System.csproj",
+      "projectUniqueName": "F:\\HR System\\back\\back_HR\\HR System.csproj",
       "projectName": "HR System",
-      "projectPath": "D:\\Pioneer\\HR System\\HR System.csproj",
-      "packagesPath": "C:\\Users\\aliaa hamdy wasel\\.nuget\\packages\\",
-      "outputPath": "D:\\Pioneer\\HR System\\obj\\",
+      "projectPath": "F:\\HR System\\back\\back_HR\\HR System.csproj",
+      "packagesPath": "C:\\Users\\aliaa\\.nuget\\packages\\",
+      "outputPath": "F:\\HR System\\back\\back_HR\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aliaa hamdy wasel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aliaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4745,7 +4745,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -125,6 +125,7 @@ namespace HR_System.Repositories.Group
         {
             var group = new Models.Group
             {
+                Id=groupDto.Id,
                 Name = groupDto.GroupName,
             };
 
@@ -145,7 +146,11 @@ namespace HR_System.Repositories.Group
 
         public void DeleteGroup(int id)
         {
-
+            var group = getbyID(id);
+            if(group!=null) {
+                group.IsDeleted = true;
+                hREntity.SaveChanges();
+            }
 
         }
         public void Addpermission(permissionsDto permissionDto)

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HR_System.Migrations
 {
     [DbContext(typeof(HREntity))]
-    [Migration("20230906102906_v2")]
-    partial class v2
+    [Migration("20230906124722_v1")]
+    partial class v1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -285,12 +285,9 @@ namespace HR_System.Migrations
                     b.Property<int>("PermissionID")
                         .HasColumnType("int");
 
-                    b.Property<int>("PermissionsId")
-                        .HasColumnType("int");
-
                     b.HasKey("GroupID", "PermissionID");
 
-                    b.HasIndex("PermissionsId");
+                    b.HasIndex("PermissionID");
 
                     b.ToTable("GroupPermissions");
                 });
@@ -330,16 +327,11 @@ namespace HR_System.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("GroupId")
-                        .HasColumnType("int");
-
                     b.Property<string>("pageName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GroupId");
 
                     b.ToTable("Permissions");
                 });
@@ -513,27 +505,20 @@ namespace HR_System.Migrations
             modelBuilder.Entity("HR_System.Models.GroupPermissions", b =>
                 {
                     b.HasOne("HR_System.Models.Group", "Groups")
-                        .WithMany()
+                        .WithMany("GroupPermissions")
                         .HasForeignKey("GroupID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HR_System.Models.Permissions", "Permissions")
                         .WithMany("GroupPermissions")
-                        .HasForeignKey("PermissionsId")
+                        .HasForeignKey("PermissionID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Groups");
 
                     b.Navigation("Permissions");
-                });
-
-            modelBuilder.Entity("HR_System.Models.Permissions", b =>
-                {
-                    b.HasOne("HR_System.Models.Group", null)
-                        .WithMany("permissions")
-                        .HasForeignKey("GroupId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -599,9 +584,9 @@ namespace HR_System.Migrations
 
             modelBuilder.Entity("HR_System.Models.Group", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("GroupPermissions");
 
-                    b.Navigation("permissions");
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("HR_System.Models.Permissions", b =>

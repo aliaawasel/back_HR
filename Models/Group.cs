@@ -8,10 +8,13 @@ namespace HR_System.Models
         public string Name { get; set; }
         [DefaultValue(false)]
         public bool IsDeleted { get; set; }
-        //public virtual ICollection<Permissions> permissions { get; set; }
 
         public virtual ICollection<ApplicationUser> Users { get; set; }
         public virtual ICollection<GroupPermissions> GroupPermissions { get; set; }
+
+
+        public virtual ICollection<Permissions> permissions { get; set; }
+
 
 
     }

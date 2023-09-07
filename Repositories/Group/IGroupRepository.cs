@@ -11,6 +11,9 @@ namespace HR_System.Repositories.Group
         void Addpermission(permissionsDto permissionDto);
         void UpdateGroup(GroupDto groupDto);
 
+        void DeleteGroup(int id);
+
+
 
 
     }

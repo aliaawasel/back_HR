@@ -18,7 +18,7 @@ namespace HR_System.Controllers
 
 
 
-        [HttpGet]
+        [HttpGet("allGroups")]
         public IActionResult GetAll()
         {
            var groups= _groupRepository.GetAllGroups();
@@ -35,7 +35,7 @@ namespace HR_System.Controllers
             }
 
         }
-        [HttpPost("Insert")]
+        [HttpPost("Insert/group")]
         public IActionResult Insert(GroupDto group)
         {
            _groupRepository.AddGroup(group);
@@ -47,6 +47,34 @@ namespace HR_System.Controllers
            
 
         }
+
+
+        [HttpPut("Update/group")]
+        public IActionResult Update(GroupDto group)
+        {
+            _groupRepository.UpdateGroup(group);
+            if (ModelState.IsValid)
+            {
+                return Ok();
+            }
+            else { return BadRequest(); }
+        }
+
+        [HttpDelete("Delete/group/{id:int}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                _groupRepository.DeleteGroup(id);
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("Insert/pages")]
         public IActionResult InsertPages(permissionsDto permission)
         {
