@@ -53,23 +53,56 @@ namespace HR_System.Controllers
 
         //}
 
-        [HttpPost("StaticlogIn")]
+        //[HttpPost("StaticlogIn")]
 
-        public IActionResult staticlogin(LoginDto userlogin) {
+        //public IActionResult staticlogin(LoginDto userlogin) {
 
-            if (userlogin.Username != "Aliaa" && userlogin.Password != "12345")
+        //    if (userlogin.Username != "Aliaa" && userlogin.Password != "12345")
+        //    {
+        //        return Unauthorized();
+        //    }
+
+        //    #region define claims
+        //    List<Claim> userdata = new List<Claim>();
+        //    userdata.Add(new Claim(ClaimTypes.NameIdentifier, userlogin.Username));
+        //    userdata.Add(new Claim(ClaimTypes.Email, $"{userlogin.Username}@gmail.com"));
+        //    #endregion
+
+        //    #region secrete key
+        //    string key = configuration.GetValue<string>("Secret");
+        //    var securitykey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
+        //    #endregion
+
+        //    #region createtoken
+        //    var singcer = new SigningCredentials(securitykey, SecurityAlgorithms.HmacSha256);
+        //    // token object
+        //    var token = new JwtSecurityToken(claims: userdata, signingCredentials: singcer, expires: DateTime.Now.AddDays(1), issuer: "Admin", audience: "weather");
+
+        //    //object to string
+
+        //    var stringToken = new JwtSecurityTokenHandler().WriteToken(token);
+        //    #endregion
+        //    return Ok(stringToken);
+
+        //}
+        [HttpPost("logIn")]
+        public async Task<IActionResult> login(LoginDto loginDto)
+        {
+            ApplicationUser user = await userManager.FindByNameAsync(loginDto.Username);
+            if (user == null)
             {
+                return NotFound();
+            }
+            var result = await userManager.CheckPasswordAsync(user, loginDto.Password);
+            if(result == false) {
                 return Unauthorized();
             }
-
             #region define claims
-            List<Claim> userdata = new List<Claim>();
-            userdata.Add(new Claim(ClaimTypes.NameIdentifier, userlogin.Username));
-            userdata.Add(new Claim(ClaimTypes.Email, $"{userlogin.Username}@gmail.com"));
+            var userdata = await userManager.GetClaimsAsync(user);
             #endregion
 
             #region secrete key
-            string key = configuration.GetValue<string>("Secret");
+            string key = configuration.GetValue<string>("JWT:Secret");
             var securitykey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
             #endregion
 
@@ -82,18 +115,8 @@ namespace HR_System.Controllers
 
             var stringToken = new JwtSecurityTokenHandler().WriteToken(token);
             #endregion
+
             return Ok(stringToken);
-
         }
-        [HttpPost("logIn")]
-        public async Task<IActionResult> login(LoginDto loginDto )
-        {
-            var user= userManager.FindByNameAsync(loginDto.Username);
-            if (user == null) {
-                return NotFound();
-            }
-            return Ok();
-        }
-
-
-    } }
+    }
+}

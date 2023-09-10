@@ -46,19 +46,22 @@ namespace HR_System
             builder.Services.AddScoped<IGroupRepository, GroupRepository>();
 
 
-            builder.Services.AddAuthentication(Options => Options.DefaultAuthenticateScheme = "myschema").AddJwtBearer("myschema",
-            Options =>
-            {
-                string key = builder.Configuration.GetValue<string>("Secret");
-                var securitykey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
-                Options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    IssuerSigningKey = securitykey,
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
+            builder.Services.AddAuthentication(Options => {
+                Options.DefaultAuthenticateScheme = "default";
+                Options.DefaultChallengeScheme = "default";
+            }).AddJwtBearer("Bearer",
+              Options =>
+              {
+                  string key = builder.Configuration.GetValue<string>("JWT:Secret");
+                  var securitykey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
+                  Options.TokenValidationParameters = new TokenValidationParameters
+                  {
+                      IssuerSigningKey = securitykey,
+                      ValidateIssuer = false,
+                      ValidateAudience = false,
 
-                };
-            });
+                  };
+              });
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options =>
             {
                 Options.Password.RequireUppercase = false;
@@ -70,10 +73,7 @@ namespace HR_System
             })
             .AddEntityFrameworkStores<HREntity>();
 
-            builder.Services.AddAuthentication(Options => { 
-                Options.DefaultAuthenticateScheme = "default";
-                Options.DefaultChallengeScheme = "default";
-                });
+           
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowingAPIClientsAccess", builder =>

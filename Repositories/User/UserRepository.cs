@@ -47,26 +47,26 @@ namespace HR_System.Repositories.User
             userDto.GroupID = user.GroupID;
             return (userDto);
         }
-        public int Insert(RegisterDto NewUserDto)
+        public async Task<int> Insert(RegisterDto NewUserDto)
         {
             ApplicationUser newUser = new Models.ApplicationUser
             {
                 UserName = NewUserDto.Username,
-                FullName = NewUserDto.Username,
+                FullName = NewUserDto.FullName,
                 Email = NewUserDto.Email,
                 GroupID = NewUserDto.Group
             };
             try
             {
-                var result = userManager.CreateAsync(newUser, NewUserDto.Password);
+                var result = await userManager.CreateAsync(newUser, NewUserDto.Password);
                 var claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.NameIdentifier, newUser.Id),
                     new Claim(ClaimTypes.Email, newUser.Email),
-                    new Claim(ClaimTypes.Name, newUser.UserName),
+                    new Claim(ClaimTypes.Name, newUser.FullName),
                     new Claim(ClaimTypes.Role,"User")
                 };
-                userManager.AddClaimsAsync(newUser, claims);
+                await userManager.AddClaimsAsync(newUser, claims);
                 hREntity.ApplicationUsers.Add(newUser);
                 hREntity.SaveChanges();
                 return 1;

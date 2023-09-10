@@ -91,6 +91,7 @@ namespace HR_System.Repositories.Group
             var groups= hREntity.Groups.Include(g=>g.GroupPermissions).ThenInclude(gp=>gp.Permissions).Where(g=>g.IsDeleted!=true).ToList();
             var GroupDto = groups.Select(g => new getAllGroupsDto
             {
+                Id=g.Id,
                 GroupName = g.Name,
                 pagesName = g.GroupPermissions.Select(gp => gp.Permissions.pageName).ToList(),
             }).ToList();
